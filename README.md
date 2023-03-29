@@ -1,3 +1,6 @@
+[![Language](https://img.shields.io/badge/language-Python_3-54a4ff.svg?style=flat-square)](https://www.python.org)
+[![License](https://img.shields.io/github/license/patohdzs/project-tinder?style=flat-square)](https://opensource.org/licenses/MIT)
+
 ```math
 \Huge
 \underline{\textbf{EC331: Research in Applied Economics}}
@@ -6,6 +9,9 @@
 # Old Dogs and New Tricks: Log Return Density Forecasting Using a Novel Neural Network Architecture and ARMA-GARCH Models
 
 This repo is for my final year undergraduate dissertation in economics at the University of Warwick. Code for the multivariate Giacomini and White (2006) and model confidence set (Hansen et al., 2011) was adapted from [this github repo](https://github.com/ogrnz/feval).
+
+$\Huge \textbf{Abstract}$ 
+> Uncertainty is fundamental in economics. Imperfect or asymmetric information can lead to marked misallocations of resources, and their ubiquity is a hard truth in many economies. Whilst in the past econometricians focused on point and interval forecasts, developments in quantitative finance and risk management have created demand for quick and accurate forecasts of the whole probability distribution. However, accuracy and speed can be conflicting goals, particularly when non-linearities in the data mean complex models are required to accurately predict the probability density function. In this paper, a novel semi-parametric neural network model is developed and compared to a variety of ARMA-GARCH models on the log returns of the NASDAQ composite, Nikkei 225, and DAX stock indices. Using a multivariate version of the Giacomini-White test of equal predictive accuracy \citep{GiacominiWhite,BorupMGW}, a large initial model set of neural network and ARMA-GARCH models is synthesised down to a model confidence set \citep{MCS}. Results indicate that the ARMA-GARCH models outperform the neural network models across all three series, and this result is robust to variations in the testing specification and choice of scoring rule.
 
 My dissertation compares ARMA-GARCH models of order $(p,p)-(p,p)$, for $p=1,2,3,4,5$, with a few variants of a neural network model that I have developed. The comparison of the two model classes follows a similar methodology to Borup et al. (2022), and uses their multivariate Giacomini-White of equal conditional predictive accuracy to construct a model confidence set (Hansen et al., 2011). A high level overview of the methodology is given in the diagram below. I focus on one step ahead forecasts and use a rolling window technique with no re-estimation at each step to keep the models computationally tractable. I compare the neural network and ARMA-GARCH models on three log return series for some globally large stock indices: the Nikkei 225, the DAX, and the NASDAQ composite.
 
